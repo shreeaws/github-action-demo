@@ -20,7 +20,9 @@ jobs:
                 key: ${{ secrets.PASSWORD }}
                 port: ${{ secrets.PORT }}
                 script: |
-                    cd /home/ubuntu/SkillPulse
+                    git clone https://github.com/shreeaws/github-action-demo.git
+                    cd github-action-demo
+                    git pull origin main
                     docker-compose pull
                     docker-compose up -d
 
