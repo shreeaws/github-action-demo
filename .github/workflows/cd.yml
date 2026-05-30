@@ -11,13 +11,13 @@ jobs:
         steps:
             - name: checkout code
               uses: actions/checkout@v2
-              
+
             - name: Execute remote SSH
               uses: appleboy/ssh-action@v1
               with:
                 host: ${{ secrets.HOST }}
                 username: ${{ secrets.USERNAME }}
-                password: ${{ secrets.PASSWORD }}
+                key: ${{ secrets.PASSWORD }}
                 port: ${{ secrets.PORT }}
                 script: |
                     cd /github-action-demo
