@@ -20,6 +20,7 @@ jobs:
                 key: ${{ secrets.PASSWORD }}
                 port: ${{ secrets.PORT }}
                 script: |
+                    rm -rf github-action-demo
                     git clone --branch main https://github.com/shreeaws/github-action-demo.git
                     cd github-action-demo
                     sudo apt-get update && sudo apt-get install -y docker-compose
